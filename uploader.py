@@ -15,7 +15,7 @@ print("Found IP address: " + ip_addr)
 
 img = qrcode.make('http://{}:50000/'.format(ip_addr))
 
-img.save("qrcode.png")
+img.save("/home/pi/ip-uploader/qrcode.png")
 
 os.system("git add .")
 
