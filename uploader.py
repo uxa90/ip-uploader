@@ -1,6 +1,8 @@
 import socket
 import qrcode
+import os
 
+os.system("git pull")
 
 def get_ip_address():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -14,3 +16,9 @@ print("Found IP address: " + ip_addr)
 img = qrcode.make('http://{}:50000/'.format(ip_addr))
 
 img.save("qrcode.png")
+
+os.system("git add .")
+
+os.system("git commit -m \"New QR Code\"")
+
+os.system("git push")
