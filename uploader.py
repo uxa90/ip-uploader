@@ -19,6 +19,6 @@ img.save("/home/uxa90/ip-uploader/qrcode.png")
 
 os.system("git add .")
 
-os.system("git commit -m \"New QR Code\"")
+os.system("git commit -m \"New QR Code: " + ip_addr + " \"")
 
 os.system("git push")
